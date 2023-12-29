@@ -82,7 +82,8 @@ export default function LoginModal() {
             <div>{message}</div>
             <div className="py-6 px-20">
               <button
-                className="w-full h-[50px] rounded-3xl bg-[rgb(15,20,25)] dark:bg-white text-white dark:text-black text-base border-none disabled:opacity-50"
+                type="submit"
+                className="w-full h-[50px] rounded-3xl bg-[rgb(15,20,25)] dark:bg-white text-white dark:text-black text-base font-bold border-none disabled:opacity-50"
                 disabled={!id && !password}
               >
                 Login
