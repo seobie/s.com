@@ -1,24 +1,23 @@
-import { HTMLAttributes, InputHTMLAttributes } from "react";
+import type { InputHTMLAttributes } from 'react'
 
 type Props = {
-  attributes: InputHTMLAttributes<HTMLInputElement>;
-  label: string;
-};
+  attributes: InputHTMLAttributes<HTMLInputElement>
+  label: string
+}
 
-export const Input = ({ label, attributes }: Props) => {
+export const Input = ({ attributes, label }: Props) => {
   return (
-    <div className="flex flex-col h-14 relative my-3">
+    <div className="relative my-3 flex h-14 flex-col">
       <label
         htmlFor={attributes.id}
-        className="w-full inline-block absolute top-0 border border-solid border-[rgb(207,217,222)] rounded text-xs h-14 px-2 pt-2 pb-0 text-[rgb(83,100,113)] focus-within:text-red-500 bg-transparent"
-      >
+        className="absolute top-0 inline-block h-14 w-full rounded border border-solid border-[rgb(207,217,222)] bg-transparent px-2 pb-0 pt-2 text-xs text-[rgb(83,100,113)] focus-within:text-red-500">
         {label}
       </label>
       <input
-        className="w-full border-none text-base mt-4 pt-3 px-2 outline-none bg-transparent"
+        className="mt-4 w-full border-none bg-transparent px-2 pt-3 text-base outline-none"
         type="text"
         {...attributes}
       />
     </div>
-  );
-};
+  )
+}
