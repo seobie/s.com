@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 
 import Link from 'next/link'
 
-import { Logout, Nav } from './components'
+import { Logout, Nav, RightSection } from './components'
 
 export default function AfterLoginLayout({
   children,
@@ -42,9 +42,9 @@ export default function AfterLoginLayout({
         </div>
       </header>
       <main className="flex-grow items-start">
-        <div className="h-full w-[1050px] border-2 border-pink-500">
-          right
+        <div className="flex h-full w-[1050px] border-2 border-pink-500">
           {children}
+          <RightSection />
         </div>
       </main>
     </div>
