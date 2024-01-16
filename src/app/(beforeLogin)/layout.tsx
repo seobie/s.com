@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import type { ReactNode } from 'react'
 
-type Props = { children: ReactNode; modal: ReactNode };
+type Props = { children: ReactNode; modal: ReactNode }
 
 export default function BeforeLoginLayout({ children, modal }: Props) {
   return (
@@ -8,5 +8,5 @@ export default function BeforeLoginLayout({ children, modal }: Props) {
       {children}
       {modal}
     </div>
-  );
+  )
 }
