@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
 
-import { MSWComponent } from '@/components'
+import { AlertProvider, ConfirmProvider, MSWComponent } from '@/components'
 
 import type { Metadata } from 'next'
 
@@ -21,7 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <MSWComponent />
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ConfirmProvider>
+          <AlertProvider>{children}</AlertProvider>
+        </ConfirmProvider>
+      </body>
     </html>
   )
 }
