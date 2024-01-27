@@ -12,7 +12,7 @@ export default function AfterLoginLayout({
   return (
     <div className="flex h-[100dvh] items-stretch justify-center">
       <header className="flex flex-grow flex-col items-end">
-        <div className="flex h-full w-[275px] flex-col border-2 border-blue-500 px-2">
+        <div className="flex h-full w-[275px] flex-col px-2">
           <Link href="/home" className="group w-fit select-none">
             <div className="transition=[background] flex h-12 w-12 cursor-pointer items-center justify-center rounded-full duration-200 group-hover:bg-[rgba(239,243,244,0.1)]">
               <div className="flex h-6 w-6 items-center justify-center">
@@ -42,7 +42,7 @@ export default function AfterLoginLayout({
         </div>
       </header>
       <main className="flex-grow items-start">
-        <div className="flex h-full w-[1050px] border-2 border-pink-500">
+        <div className="flex h-full w-[1050px]">
           {children}
           <RightSection />
         </div>

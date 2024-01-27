@@ -3,9 +3,8 @@
 import { useAlert } from '@/components'
 import { useConfirm } from '@/components/Confirm/useConfirm'
 
-import { Post } from './components'
+import { Posts } from './components'
 import { Tab } from './components/Tab'
-import { SearchForm } from '../components'
 
 export default function HomePage() {
   const { addAlert } = useAlert()
@@ -13,6 +12,7 @@ export default function HomePage() {
   return (
     <div className="flex w-full flex-col overflow-auto border-[1px] border-solid border-[rgb(47,51,54)]">
       <Tab />
+      <Posts />
       <button
         className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
         onClick={() =>
@@ -45,23 +45,6 @@ export default function HomePage() {
         }>
         confirm?
       </button>
-      <Post />
-      <SearchForm />
-      <SearchForm />
-      <SearchForm />
-      <SearchForm />
-      <SearchForm />
-      <SearchForm />
-      <SearchForm />
-      <SearchForm />
-      <SearchForm />
-      <SearchForm />
-      <SearchForm />
-      <SearchForm />
-      <SearchForm />
-      <SearchForm />
-      <SearchForm />
-      <SearchForm />
     </div>
   )
 }
