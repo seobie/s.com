@@ -3,6 +3,7 @@
 import { useAlert } from '@/components'
 import { useConfirm } from '@/components/Confirm/useConfirm'
 
+import { Post } from './components'
 import { Tab } from './components/Tab'
 import { SearchForm } from '../components'
 
@@ -44,6 +45,7 @@ export default function HomePage() {
         }>
         confirm?
       </button>
+      <Post />
       <SearchForm />
       <SearchForm />
       <SearchForm />
