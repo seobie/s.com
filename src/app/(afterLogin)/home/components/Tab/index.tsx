@@ -7,7 +7,7 @@ import { TabButton } from './TabButton'
 export const Tab = () => {
   const [activeTabIndex, setActiveTabIndex] = useState(0)
   return (
-    <div className="sticky top-0 border-[1px] border-l-0 border-r-0 border-solid border-[rgb(47,51,54)] backdrop-blur-sm">
+    <div className="sticky top-0 z-10 border-[1px] border-l-0 border-r-0 border-solid border-[rgb(47,51,54)] bg-[rgba(0,0,0,0.65)] backdrop-blur-md">
       <div className="flex w-full items-center">
         <TabButton
           label="For you"

@@ -11,7 +11,7 @@ export const DynamicIcon = (props: DynamicIconProps) => {
   const Icon = dynamic(() => import(`../../../public/icons/${name}.svg`))
 
   return (
-    <div style={{ color, fill: color, height, width }} className={className}>
+    <div style={{ fill: color, height, width }} className={className}>
       <Icon />
     </div>
   )

@@ -73,10 +73,10 @@ type POST = {
 export const Post = () => {
   const POST_SAMPLE: POST = {
     _count: {
-      comment: faker.datatype.number({ max: 10000, min: 0 }),
-      like: faker.datatype.number({ max: 10000, min: 0 }),
-      repost: faker.datatype.number({ max: 10000, min: 0 }),
-      view: faker.datatype.number({ max: 1000000, min: 0 }),
+      comment: faker.number.int({ max: 10000, min: 0 }),
+      like: faker.number.int({ max: 10000, min: 0 }),
+      repost: faker.number.int({ max: 10000, min: 0 }),
+      view: faker.number.int({ max: 1000000, min: 0 }),
     },
     Comments: [{ userId: faker.internet.userName() }],
     Hearts: [
@@ -90,20 +90,20 @@ export const Post = () => {
     Reposts: undefined,
     User: {
       _count: {
-        Followers: faker.datatype.number({ max: 1000, min: 0 }),
-        Followings: faker.datatype.number({ max: 1000, min: 0 }),
+        Followers: faker.number.int({ max: 1000, min: 0 }),
+        Followings: faker.number.int({ max: 1000, min: 0 }),
       },
       Followers: undefined,
       Posts: [],
       id: faker.internet.userName(),
       image: faker.image.avatar(),
-      nickname: faker.name.fullName(),
+      nickname: faker.person.fullName(),
       password: '',
     },
     content: faker.lorem.paragraph(),
     createdAt: faker.date.past(),
     deletedAt: undefined, // POST 객체에 해당하는 필드가 없으므로 null로 설정
-    postId: faker.datatype.number({ max: 1000000, min: 0 }),
+    postId: faker.number.int({ max: 1000000, min: 0 }),
     userId: faker.internet.userName(),
   }
   return (
@@ -123,9 +123,7 @@ export const Post = () => {
             alt="avatar"
             width={40}
             height={40}
-            objectFit="contain"
-            objectPosition="center"
-            className="rounded-full"
+            className="rounded-full object-contain object-center"
           />
         </span>
         <div className="flex w-full flex-col">

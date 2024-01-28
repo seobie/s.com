@@ -4,6 +4,7 @@ export type IconName =
   | 'home-stroke'
   | 'home'
   | 'like'
+  | 'logo'
   | 'magnifier-stroke-thick'
   | 'magnifier-stroke'
   | 'message-fill'

@@ -10,7 +10,7 @@ export default function HomePage() {
   const { addAlert } = useAlert()
   const { addConfirm } = useConfirm()
   return (
-    <div className="flex w-full flex-col overflow-auto border-[1px] border-solid border-[rgb(47,51,54)]">
+    <div className="flex w-full max-w-[600px] flex-col border-[1px] border-solid border-[rgb(47,51,54)]">
       <Tab />
       <Posts />
       <button
