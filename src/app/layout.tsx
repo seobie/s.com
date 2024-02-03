@@ -20,8 +20,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <MSWComponent />
       <body className={inter.className}>
+        <MSWComponent />
         <ConfirmProvider>
           <AlertProvider>{children}</AlertProvider>
         </ConfirmProvider>

@@ -1,5 +1,6 @@
 export type IconName =
   | 'bookmark'
+  | 'close'
   | 'comment'
   | 'home-stroke'
   | 'home'

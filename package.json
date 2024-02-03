@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"next dev\" \"npm:watch-icons\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -12,7 +12,9 @@
     "format": "prettier --check \"**/*.{ts,tsx}\"",
     "format:fix": "prettier --write \"**/*.{ts,tsx}\"",
     "mock": "npx tsx watch ./src/mocks/http.ts",
-    "update-icons": "node src/libs/updateIconNames.js"
+    "update-icons": "node src/libs/updateIconNames.js",
+    "watch-icons": "node src/libs/watchIcons.js",
+    "dev:mock": "concurrently \"next dev\" \"npm:watch-icons\" \"npm run mock\""
   },
   "dependencies": {
     "dayjs": "^1.11.10",
@@ -34,6 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^6.18.0",
     "@typescript-eslint/parser": "^6.18.0",
     "autoprefixer": "^10.0.1",
+    "concurrently": "^8.2.2",
     "cors": "^2.8.5",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
