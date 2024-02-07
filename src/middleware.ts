@@ -9,7 +9,7 @@ export async function middleware() {
   }
 }
 
-// See "Matching Paths" below to learn more
+// nextjs middleware example 참고
 export const config = {
   matcher: ['/compose/tweet', '/home', '/explore', '/messages', '/search'],
 }
