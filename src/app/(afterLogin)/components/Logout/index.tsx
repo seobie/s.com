@@ -1,8 +1,35 @@
+'use client'
+
+// import { useQueryClient } from '@tanstack/react-query'
+import { useRouter } from 'next/navigation'
+import { signOut } from 'next-auth/react'
+
 import { DynamicIcon } from '@/components'
 
 export const Logout = () => {
+  const router = useRouter()
+  // const queryClient = useQueryClient()
+
+  const onLogout = () => {
+    // queryClient.invalidateQueries({
+    //   queryKey: ['posts'],
+    // })
+    // queryClient.invalidateQueries({
+    //   queryKey: ['users'],
+    // })
+    signOut({ redirect: false }).then(() => {
+      fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/logout`, {
+        credentials: 'include',
+        method: 'post',
+      })
+      router.replace('/')
+    })
+  }
+
   return (
-    <div className="transition=[background] my-3 w-full cursor-pointer rounded-full bg-transparent p-3 duration-200 hover:bg-[rgba(231,233,234,0.1)]">
+    <div
+      className="transition=[background] my-3 w-full cursor-pointer rounded-full bg-transparent p-3 duration-200 hover:bg-[rgba(231,233,234,0.1)]"
+      onClick={onLogout}>
       <div className="flex">
         <DynamicIcon
           name="logo"
