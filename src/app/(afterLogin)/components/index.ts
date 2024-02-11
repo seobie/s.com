@@ -1,5 +1,6 @@
 export * from './FollowRecommend'
 export * from './Left'
+export * from './LeftSection'
 export * from './Logout'
 export * from './Nav'
 export * from './RightCard'
